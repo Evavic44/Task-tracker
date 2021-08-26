@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# Task Tracker
+<img src="https://user-images.githubusercontent.com/62628408/131042558-37d0f66a-be37-4725-a89d-157a95e7b0f7.png" width="1000px">
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
