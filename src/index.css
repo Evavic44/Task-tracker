@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito+Sans:200,200italic,300,300italic,regular,italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
 * {
   margin: 0;
   padding: 0;
@@ -5,10 +7,12 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Nunito sans", sans-serif;
   background: linear-gradient(to right, rgb(212, 8, 212), rgb(90, 13, 141));
   color: #fff;
   padding: 1rem;
+  --primary-color: orangered;
+  --secondary-color: indigo;
 }
 
 .container {
@@ -16,7 +20,7 @@ body {
   min-height: 500px;
   margin: 30px auto;
   background: rgba(255, 255, 255, 0.3);
-  box-shadow: rgba(0, 0, 0, 0.40) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border: 1px solid rgba(255, 255, 255, 0.18);
@@ -25,48 +29,83 @@ body {
 }
 
 .header {
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
-   margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
 }
 
 .btn {
-   display: inline-block;
-   border: transparent;
-   background: rgba(255, 255, 255, 0.3);
-   color: #fff;
-   padding: 0.7rem 1.8rem;
-   cursor: pointer;
-   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-   transition: .3s ease-in-out;
+  display: inline-block;
+  border: transparent;
+  background: rgba(255, 255, 255, 0.3);
+  color: #fff;
+  padding: 0.7rem 1.8rem;
+  cursor: pointer;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: 0.3s ease-in-out;
 }
 
 .btn:hover {
-   box-shadow: rgba(37, 37, 56, 0.8) 0px 2px 5px -1px, rgba(0, 0, 0, 0.8) 0px 1px 3px -1px;
-   background: rgba(255, 255, 255, 0.4);
+  box-shadow: rgba(37, 37, 56, 0.8) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.8) 0px 1px 3px -1px;
+  background: rgba(255, 255, 255, 0.4);
 }
 
 .task {
-   background: rgba(255, 255, 255, 0.2);
-   border: 1px solid rgba(255, 255, 255, 0.3);
-   border-radius: 3px;
-   box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 3px, rgba(0, 0, 0, 0.1) 0px 3px 3px;
-   margin: 7px 0;
-   padding: 1rem;
-   cursor: pointer;
-   transition: .3s ease-in-out;
-   position: relative;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 3px, rgba(0, 0, 0, 0.1) 0px 3px 3px;
+  margin: 7px 0;
+  padding: 1rem;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
 }
 
-.task:hover {background: rgba(255, 255, 255, 0.4);}
+.task:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
 
 .task h3 {
-   display: flex; 
-   justify-content: space-between;
-   align-items: center; 
-   font-size: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
 }
 
-.task.reminder {border-left: 1px solid orangered;}
-.task p {font-size: 0.75rem;}
+.task.reminder {
+  border-left: 4px solid var(--primary-color);
+}
+.task p {
+  font-size: 0.75rem;
+}
+
+/* Form field */
+label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 0.1rem;
+  font-weight: 600;
+}
+
+input {
+  font-family: "Nunito sans" sans-serif;
+  width: 100%;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.096);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+  transition: 0.3s ease-in-out;
+  color: var(--secondary-color);
+  font-size: 0.73rem;
+  font-weight: 600;
+}
+
+input:focus {
+  background: rgba(255, 255, 255, 0.4);
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: white;
+}
