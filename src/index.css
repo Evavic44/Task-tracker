@@ -7,38 +7,38 @@
 }
 
 body {
+  background: url(/src/components/img/lighthouse.png) no-repeat center
+    center/cover;
   font-family: "Nunito sans", sans-serif;
-  background: linear-gradient(to right, rgb(212, 8, 212), rgb(90, 13, 141));
-  color: #fff;
+  color: #333;
   padding: 1rem;
   --primary-color: orangered;
   --secondary-color: indigo;
+  height: 100vh;
 }
 
 .container {
-  max-width: 450px;
+  max-width: 420px;
   min-height: 500px;
   margin: 30px auto;
-  background: rgba(255, 255, 255, 0.3);
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  background: rgba(100, 100, 100, 0);
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 10px 20px, rgba(0, 0, 0, 0.5) 0px 10px 20px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 2px;
-  padding: 1rem 1.4rem;
+  padding: 1rem 1.2rem;
 }
 
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 2rem;
+  margin-bottom: 1.6rem;
 }
 
 .btn {
   display: inline-block;
-  border: transparent;
-  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  background: var(--primary-color);
   color: #fff;
   padding: 0.7rem 1.8rem;
   cursor: pointer;
@@ -50,22 +50,21 @@ body {
 .btn:hover {
   box-shadow: rgba(37, 37, 56, 0.8) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.8) 0px 1px 3px -1px;
-  background: rgba(255, 255, 255, 0.4);
+  background: rgb(241, 70, 8);
 }
 
 .task {
-  background: rgba(255, 255, 255, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.8);
   border-radius: 3px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 3px, rgba(0, 0, 0, 0.1) 0px 3px 3px;
-  margin: 7px 0;
-  padding: 1rem;
+  margin: 10px 0;
+  padding: 0.8rem;
   cursor: pointer;
   transition: 0.2s ease-in-out;
 }
 
 .task:hover {
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.6);
 }
 
 .task h3 {
@@ -79,33 +78,34 @@ body {
   border-left: 4px solid var(--primary-color);
 }
 .task p {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
 }
 
 /* Form field */
 label {
   display: block;
   font-size: 0.9rem;
-  margin-bottom: 0.1rem;
-  font-weight: 600;
+  margin-bottom: 0.2rem;
+  font-weight: 300;
 }
 
 input {
   font-family: "Nunito sans" sans-serif;
   width: 100%;
   padding: 1rem;
-  background: rgba(255, 255, 255, 0.096);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0);
+  border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 3px;
   transition: 0.3s ease-in-out;
-  color: var(--secondary-color);
-  font-size: 0.73rem;
-  font-weight: 600;
+  font-size: 0.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  margin-bottom: 0.45rem;
+  outline: none;
+  color: #333;
 }
 
 input:focus {
-  background: rgba(255, 255, 255, 0.4);
-  outline: none;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  color: white;
+  background: rgba(255, 255, 255, 0);
+  color: #000;
+  border: 1px solid rgba(255, 255, 255, 0.8);
 }
