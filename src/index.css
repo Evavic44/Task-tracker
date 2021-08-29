@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito+Sans:200,200italic,300,300italic,regular,italic,600,600italic,700,700italic,800,800italic,900,900italic);
+@import url(https://fonts.googleapis.com/css?family=Quicksand:300,regular,500,600,700);
 
 * {
   margin: 0;
@@ -7,21 +7,19 @@
 }
 
 body {
-  background: url(/src/components/img/lighthouse.png) no-repeat center
-    center/cover;
-  font-family: "Nunito sans", sans-serif;
-  color: #333;
+  background: linear-gradient(to right, rgb(212, 8, 212), rgb(90, 13, 141));
+  color: #fff;
+  font-family: "Quicksand", sans-serif;
   padding: 1rem;
   --primary-color: orangered;
   --secondary-color: indigo;
-  height: 100vh;
 }
 
 .container {
   max-width: 420px;
   min-height: 500px;
   margin: 30px auto;
-  background: rgba(100, 100, 100, 0);
+  background: rgba(255, 255, 255, 0.27);
   box-shadow: rgba(0, 0, 0, 0.5) 0px 10px 20px, rgba(0, 0, 0, 0.5) 0px 10px 20px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 2px;
@@ -42,19 +40,17 @@ body {
   color: #fff;
   padding: 0.7rem 1.8rem;
   cursor: pointer;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
-    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   transition: 0.3s ease-in-out;
+  outline: none;
 }
 
 .btn:hover {
-  box-shadow: rgba(37, 37, 56, 0.8) 0px 2px 5px -1px,
-    rgba(0, 0, 0, 0.8) 0px 1px 3px -1px;
   background: rgb(241, 70, 8);
 }
 
 .task {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0);
   border-radius: 3px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 3px, rgba(0, 0, 0, 0.1) 0px 3px 3px;
   margin: 10px 0;
@@ -64,7 +60,8 @@ body {
 }
 
 .task:hover {
-  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 1);
+  background: rgba(255, 255, 255, 0);
 }
 
 .task h3 {
@@ -97,7 +94,7 @@ input {
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 3px;
   transition: 0.3s ease-in-out;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   border: 1px solid rgba(255, 255, 255, 0.5);
   margin-bottom: 0.45rem;
   outline: none;
@@ -106,6 +103,6 @@ input {
 
 input:focus {
   background: rgba(255, 255, 255, 0);
-  color: #000;
+  color: #222;
   border: 1px solid rgba(255, 255, 255, 0.8);
 }
