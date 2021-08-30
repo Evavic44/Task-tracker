@@ -1,4 +1,6 @@
-# Task Tracker
+<h1 align="center">Task Tracker</h1> <img src="https://user-images.githubusercontent.com/62628408/131289665-a145bf22-b608-4a82-a6c5-5c91a9e61bca.png" align="center" width="80px">
+
+
 <img src="https://user-images.githubusercontent.com/62628408/131284172-b4893371-949c-496a-909f-8c17475c00f9.png" width="1000px">
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/7e0feae5-3a1d-41e3-8e16-bca5e75822e4/deploy-status)](https://app.netlify.com/sites/todo-list-task-tracker/deploys)
