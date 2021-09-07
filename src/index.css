@@ -90,7 +90,7 @@ input {
   font-family: "Nunito sans" sans-serif;
   width: 100%;
   padding: 1rem;
-  background: rgba(255, 255, 255, 0);
+  background: rgba(255, 255, 255, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 3px;
   transition: 0.3s ease-in-out;
@@ -98,11 +98,10 @@ input {
   border: 1px solid rgba(255, 255, 255, 0.5);
   margin-bottom: 0.45rem;
   outline: none;
-  color: #e3e3e3;
+  color: #fff;
 }
 
 input:focus {
   background: rgba(255, 255, 255, 0);
-  color: #fff;
   border: 1px solid rgba(255, 255, 255, 0.8);
 }
