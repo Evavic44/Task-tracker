@@ -98,11 +98,11 @@ input {
   border: 1px solid rgba(255, 255, 255, 0.5);
   margin-bottom: 0.45rem;
   outline: none;
-  color: #333;
+  color: #e3e3e3;
 }
 
 input:focus {
   background: rgba(255, 255, 255, 0);
-  color: #222;
+  color: #fff;
   border: 1px solid rgba(255, 255, 255, 0.8);
 }
