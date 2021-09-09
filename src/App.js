@@ -23,6 +23,7 @@ const App = () => {
 
     return data;
   };
+
   //   Fetch Task
   const fetchTask = async (id) => {
     const res = await fetch(`http://localhost:5000/tasks/${id}`);
@@ -53,7 +54,7 @@ const App = () => {
   // Delete Task
   const deleteTask = async (id) => {
     await fetch(`http://localhost:5000/tasks/${id}`, {
-      method: "Delete",
+      method: "DELETE",
     });
 
     setTasks(tasks.filter((task) => task.id !== id));
