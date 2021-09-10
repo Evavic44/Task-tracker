@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { useLocation } from "react-router";
+// import { useLocation } from "react-router";
 import Button from "./Button";
 import logo from "../assets/logo.png";
 
@@ -7,7 +7,7 @@ const Header = ({ title, onAdd, showAdd }) => {
   return (
     <header className="header">
       <div>
-        <img style={mainLogo} src={logo} />
+        <img style={mainLogo} src={logo} alt="Task Tracker Logo" />
         <h1>{title}</h1>
       </div>
       <Button

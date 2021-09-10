@@ -9,6 +9,8 @@ const Footer = () => {
           style={footerLink}
           href="https://victoreke.netlify.app"
           target="_blank"
+          rel="noreferrer"
+          rel="noopener"
         >
           Eke
         </a>
