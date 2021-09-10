@@ -33,6 +33,11 @@ body {
   margin-bottom: 1.6rem;
 }
 
+.header div {
+  display: flex;
+  align-items: center;
+}
+
 .btn {
   display: inline-block;
   border: none;
@@ -104,4 +109,17 @@ input {
 input:focus {
   background: rgba(255, 255, 255, 0);
   border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+@keyframes animate {
+  0% {
+    color: white;
+  }
+
+  100% {
+    color: orangered;
+  }
+}
+.heart {
+  animation: animate 2s infinite alternate-reverse ease;
 }

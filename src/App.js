@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 import Tasks from "./components/Tasks";
 import AddTask from "./components/AddTask";
+// import logo from "../assets/logo.png";
 
 const App = () => {
   const [showAddTask, setShowAddTask] = useState(false);
@@ -94,6 +96,8 @@ const App = () => {
       ) : (
         "No task to show"
       )}
+
+      <Footer />
     </div>
   );
 };
