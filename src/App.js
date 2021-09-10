@@ -3,7 +3,6 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Tasks from "./components/Tasks";
 import AddTask from "./components/AddTask";
-// import logo from "../assets/logo.png";
 
 const App = () => {
   const [showAddTask, setShowAddTask] = useState(false);
@@ -47,19 +46,16 @@ const App = () => {
     const data = await res.json();
 
     setTasks([...tasks, data]);
-
-    //  const id = Math.floor(Math.random() * 10000) + 1;
-    //  const newTask = { id, ...task };
-    //  setTasks([...tasks, newTask]);
   };
 
   // Delete Task
   const deleteTask = async (id) => {
-    await fetch(`http://localhost:5000/tasks/${id}`, {
+    const res = await fetch(`http://localhost:5000/tasks/${id}`, {
       method: "DELETE",
     });
-
-    setTasks(tasks.filter((task) => task.id !== id));
+    res.status === 200
+      ? setTasks(tasks.filter((task) => task.id !== id))
+      : alert("Error Deleting Task");
   };
 
   // Toggle Reminder
@@ -94,7 +90,7 @@ const App = () => {
       {tasks.length > 0 ? (
         <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} />
       ) : (
-        "No task to show"
+        "No Tasks to show"
       )}
 
       <Footer />
