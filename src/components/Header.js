@@ -1,10 +1,14 @@
 import PropTypes from "prop-types";
 import Button from "./Button";
+import logo from "../assets/logo.png";
 
 const Header = ({ title, onAdd, showAdd }) => {
   return (
     <header className="header">
-      <h1>{title}</h1>
+      <div>
+        <img style={mainLogo} src={logo} />
+        <h1>{title}</h1>
+      </div>
       <Button
         color={showAdd ? "rgba(255, 255, 255, 0.3)" : "orangered"}
         text={showAdd ? "Close" : "Add"}
@@ -16,6 +20,11 @@ const Header = ({ title, onAdd, showAdd }) => {
 
 Header.defaultProps = {
   title: "Task Tracker",
+};
+
+const mainLogo = {
+  width: "25px",
+  marginRight: "2px",
 };
 
 Header.propTypes = {
