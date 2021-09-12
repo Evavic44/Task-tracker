@@ -5,7 +5,7 @@ const Button = ({ color, text, onClick }) => {
     <button
       onClick={onClick}
       style={{ backgroundColor: color }}
-      className="btn"
+      className="btn inline-block border-none w-20 h-9 cursor-pointer outline-none"
     >
       {text}
     </button>

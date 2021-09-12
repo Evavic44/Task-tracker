@@ -3,14 +3,13 @@ import { FaHeart } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer style={footerCont}>
-      <div>
+      <div className="flex align-center ">
         Made with <FaHeart className="heart" /> by{" "}
         <a
           style={footerLink}
           href="https://victoreke.netlify.app"
           target="_blank"
-          rel="noreferrer"
-          rel="noopener"
+          rel="noreferrer noopener"
         >
           Eke
         </a>
@@ -34,6 +33,7 @@ const footerCont = {
 
 const footerLink = {
   color: "#fff",
+  textDecoration: "Underline",
 };
 
 export default Footer;

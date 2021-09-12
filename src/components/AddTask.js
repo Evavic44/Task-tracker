@@ -23,38 +23,67 @@ const AddTask = ({ onAdd }) => {
   return (
     <form className="add-form" onSubmit={onSubmit}>
       <div className="form-control">
-        <label>Task</label>
+        <label className="text-sm block mb-1 font-medium" htmlFor="task">
+          Task
+        </label>
         <input
+          style={inputStyle}
+          className="w-full mb-4 p-4 text-sm focus:outline-none focus:ring-1 focus:ring-white"
           type="text"
           placeholder="Add Task"
+          id="task"
           value={text}
           onChange={(e) => setText(e.target.value)}
         />
       </div>
 
       <div className="form-control">
-        <label>Day & Time</label>
+        <label className="text-sm block mb-1 font-medium" htmlFor="date">
+          Day & Time
+        </label>
         <input
+          style={inputStyle}
+          className="w-full mb-2 p-4 text-sm focus:outline-none focus:ring-1 focus:ring-white"
           type="text"
           placeholder="Add Day & Time"
+          id="date"
           value={day}
           onChange={(e) => setDay(e.target.value)}
         />
       </div>
 
-      <div className="form-control form-control-check">
-        <label>Set Reminder</label>
+      <div className="form-control form-control-check flex items-center py-2">
+        <label className="text-sm block mb-2 font-medium" htmlFor="reminder">
+          Set Reminder:
+        </label>
         <input
+          className="ml-3"
           type="checkbox"
           checked={reminder}
+          id="reminder"
           value={reminder}
           onChange={(e) => setReminder(e.currentTarget.checked)}
         />
       </div>
 
-      <input type="submit" value="Save Task" className="btn btn-block" />
+      <input
+        style={buttonPrimary}
+        type="submit"
+        value="Save Task"
+        className="btn btn-block cursor-pointer py-3 w-full"
+      />
     </form>
   );
+};
+
+const buttonPrimary = {
+  background: "orangered",
+  border: "none",
+};
+
+const inputStyle = {
+  transition: "0.1s ease",
+  background: "rgba(255, 255, 255, 0.3)",
 };
 
 export default AddTask;
