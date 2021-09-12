@@ -81,21 +81,33 @@ const App = () => {
   };
 
   return (
-    <div className="container">
-      <Header
-        onAdd={() => setShowAddTask(!showAddTask)}
-        showAdd={showAddTask}
-      />
-      {showAddTask && <AddTask onAdd={addTask} />}
-      {tasks.length > 0 ? (
-        <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} />
-      ) : (
-        "No Tasks to show"
-      )}
+    <body style={backgroundAnimate} className="p-3 h-screen">
+      <div className="container m-auto my-8 max-w-md bg-white p-8 text-white rounded bg-opacity-30">
+        <Header
+          onAdd={() => setShowAddTask(!showAddTask)}
+          showAdd={showAddTask}
+        />
+        {showAddTask && <AddTask onAdd={addTask} />}
+        {tasks.length > 0 ? (
+          <Tasks
+            tasks={tasks}
+            onDelete={deleteTask}
+            onToggle={toggleReminder}
+          />
+        ) : (
+          "No Tasks to show"
+        )}
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </body>
   );
+};
+
+const backgroundAnimate = {
+  background: "linear-gradient(to right, rgb(212, 8, 212), orangered)",
+  fontFamily: "'Quicksand', sansSerif",
+  boxSizing: "border-box",
 };
 
 export default App;
