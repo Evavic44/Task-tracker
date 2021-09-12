@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Tasks from "./components/Tasks";
@@ -6,56 +6,40 @@ import AddTask from "./components/AddTask";
 
 const App = () => {
   const [showAddTask, setShowAddTask] = useState(false);
-  const [tasks, setTasks] = useState([]);
-
-  useEffect(() => {
-    const getTasks = async () => {
-      const tasksFromServer = await fetchTasks();
-      setTasks(tasksFromServer);
-    };
-
-    getTasks();
-  }, []);
-
-  //   Fetch Tasks
-  const fetchTasks = async () => {
-    const res = await fetch("http://localhost:5000/tasks");
-    const data = await res.json();
-
-    return data;
-  };
+  const [tasks, setTasks] = useState([
+   {
+      "id": 1,
+      "text": "Doctors Appointment",
+      "day": "Feb 5th at 2:30pm",
+      "reminder": true
+    },
+    {
+      "id": 2,
+      "text": "Meeting at School",
+      "day": "Feb 6th at 1:30pm",
+      "reminder": true
+    }
+  ]);
 
   //   Fetch Task
   const fetchTask = async (id) => {
     const res = await fetch(`http://localhost:5000/tasks/${id}`);
-    const data = await res.json();
+   //  const data = await res.json();
+    const data = res.json();
 
     return data;
   };
 
   // Add Task
   const addTask = async (task) => {
-    const res = await fetch("http://localhost:5000/tasks", {
-      method: "POST",
-      headers: {
-        "Content-type": "application/json",
-      },
-      body: JSON.stringify(task),
-    });
-
-    const data = await res.json();
-
-    setTasks([...tasks, data]);
-  };
+   const id = Math.floor(Math.random() * 10000) + 1
+   const newTask = { id, ...task }
+   setTasks([...tasks, newTask])
+  }
 
   // Delete Task
-  const deleteTask = async (id) => {
-    const res = await fetch(`http://localhost:5000/tasks/${id}`, {
-      method: "DELETE",
-    });
-    res.status === 200
-      ? setTasks(tasks.filter((task) => task.id !== id))
-      : alert("Error Deleting Task");
+  const deleteTask = (id) => {
+   setTasks(tasks.filter((task) => task.id !== id))
   };
 
   // Toggle Reminder
@@ -81,7 +65,7 @@ const App = () => {
   };
 
   return (
-    <body style={backgroundAnimate} className="p-3 h-screen">
+    <body style={backgroundAnimate} className="p-3 h-full">
       <div className="container m-auto my-8 max-w-md bg-white p-8 text-white rounded bg-opacity-30">
         <Header
           onAdd={() => setShowAddTask(!showAddTask)}
@@ -105,7 +89,6 @@ const App = () => {
 };
 
 const backgroundAnimate = {
-  background: "linear-gradient(to right, rgb(212, 8, 212), orangered)",
   fontFamily: "'Quicksand', sansSerif",
   boxSizing: "border-box",
 };

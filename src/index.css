@@ -5,15 +5,8 @@
 
 @import url(https://fonts.googleapis.com/css?family=Quicksand:300,regular,500,600,700);
 
-.task {
-  background: rgba(255, 255, 255, 0.3);
-  border: 1px solid rgba(0, 0, 0, 0);
-  border-radius: 3px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 3px, rgba(0, 0, 0, 0.1) 0px 3px 3px;
-  margin: 10px 0;
-  padding: 0.8rem;
-  cursor: pointer;
-  transition: 0.2s ease-in-out;
+body {
+  background: linear-gradient(to right, rgb(212, 8, 212), orangered);
 }
 
 .task:hover {
