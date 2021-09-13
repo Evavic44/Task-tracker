@@ -1,4 +1,3 @@
-/* ./src/index.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,33 +8,6 @@ body {
   background: linear-gradient(to right, rgb(212, 8, 212), orangered);
 }
 
-.task:hover {
-  border: 1px solid rgba(255, 255, 255, 1);
-  background: rgba(255, 255, 255, 0);
-}
-
-.task h3 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 0.9rem;
-}
 .task.reminder {
   border-left: 4px solid var(--primary-color);
-}
-.task p {
-  font-size: 0.7rem;
-}
-
-@keyframes animate {
-  0% {
-    color: white;
-  }
-
-  100% {
-    color: orangered;
-  }
-}
-.heart {
-  animation: animate 2s infinite alternate-reverse ease;
 }

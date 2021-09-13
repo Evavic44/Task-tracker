@@ -7,7 +7,7 @@ const Task = ({ task, onDelete, onToggle }) => {
       className={`task ${task.reminder && "reminder"}`}
       onDoubleClick={() => onToggle(task.id)}
     >
-      <h3>
+      <h3 className="flex justify-between items-center" style={taskh3}>
         {task.text}{" "}
         <FaTimes
           style={{
@@ -17,7 +17,7 @@ const Task = ({ task, onDelete, onToggle }) => {
           onClick={() => onDelete(task.id)}
         />
       </h3>
-      <p>{task.day}</p>
+      <p style={taskp}>{task.day}</p>
     </div>
   );
 };
@@ -31,6 +31,14 @@ const taskInput = {
   padding: "0.8rem",
   cursor: "pointer",
   transition: "0.2s ease-in-out",
+};
+
+const taskh3 = {
+  fontSize: "0.9rem",
+};
+
+const taskp = {
+  fontSize: "0.8rem",
 };
 
 export default Task;
