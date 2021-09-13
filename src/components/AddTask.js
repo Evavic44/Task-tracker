@@ -52,8 +52,8 @@ const AddTask = ({ onAdd }) => {
         />
       </div>
 
-      <div className="form-control form-control-check flex items-center py-2">
-        <label className="text-sm block mb-2 font-medium" htmlFor="reminder">
+      <div className="form-control form-control-check flex items-center justify-center py-3">
+        <label className="text-sm block font-medium" htmlFor="reminder">
           Set Reminder:
         </label>
         <input

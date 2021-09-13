@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer style={footerCont}>
       <div className="flex align-center justify-center">
-        Made with &nbsp; <FaHeart className="heart self-center block" />
+        Made with &nbsp; <FaHeart className="heart self-center block" /> &nbsp;
         by
         <a
           className="px-2"
